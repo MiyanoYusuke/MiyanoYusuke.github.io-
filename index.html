@@ -10,7 +10,7 @@
     padding: 0;
 }
 body {
-    background-image: url(https://github.com/MiyanoYusuke/MiyanoYusuke.github.io-/haikei.jpg);
+    background-image: url(img/haikei.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -61,44 +61,46 @@ small {
 </style>
 </head>
 <body>
-<main>
-    <h1>portfolio</h1>
-    <section>
-        <h2>自己紹介</h2>
-        <dl>
-            <dt>名前</dt>
-            <dd><ruby>宮野<rt>みやの</rt>佑亮<rt>ゆうすけ</rt></ruby></dd>
-            <dt>生年月日</dt>
-            <dd>平成11年7月2日</dd>
-            <dt>所属</dt>
-            <dd>盛岡情報ビジネス専門学校 総合システム工学科<br>WEBプログラマコース 2年</dd>
-            <dt>好きなこと</dt>
-            <dd>音楽を聴くこととゲーム</dd>
-            <dt>メール</dt>
-            <dd><a href="mailto:y.miyano1831@morijyobi.ac.jp">y.miyano1831@morijyobi.ac.jp</a></dd>
-        </dl>
-    </section>
-    <section>
-        <h2>資格</h2>
-            <ul>
-                <li>ITパスポート試験 合格</li>
-                <li>Microsoft Office Specialist Exel</li>
-                <li>WEBクリエイター能力認定試験 スタンダード</li>
-                <li>javaプログラミング能力認定試験</li>
-            </ul>
-    </section>
-    <section>
-        <h2>技能 <span id="text">自信はありません</span></h2>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>PHP</li>
-                <li>javascript</li>
-            </ul>
-    </section>
-</main>
+<h1>portfolio</h1>
+<div id="container">
+<section>
+    <h2>自己紹介</h2>
+    <dl>
+        <dt>名前</dt>
+        <dd><ruby>宮野<rt>みやの</rt>佑亮<rt>ゆうすけ</rt></ruby></dd>
+        <dt>生年月日</dt>
+        <dd>平成11年7月2日</dd>
+        <dt>所属</dt>
+        <dd>盛岡情報ビジネス専門学校 総合システム工学科<br>WEBプログラマコース 2年</dd>
+        <dt>好きなこと</dt>
+        <dd>音楽を聴くこととゲーム</dd>
+        <dt>メール</dt>
+        <dd><a href="mailto:y.miyano1831@morijyobi.ac.jp">y.miyano1831@morijyobi.ac.jp</a></dd>
+    </dl>
+</section>
+<section>
+    <h2>資格</h2>
+        <ul>
+            <li>ITパスポート試験 合格</li>
+            <li>Microsoft Office Specialist Exel</li>
+            <li>WEBクリエイター能力認定試験 スタンダード</li>
+            <li>javaプログラミング能力認定試験</li>
+        </ul>
+</section>
+<section>
+    <h2>技能 <span id="text">自信はありません</span></h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>PHP</li>
+            <li>javascript</li>
+        </ul>
+</section>
+</div>
 <footer>
     <small><p>&copy;Yusuke Miyano 2019.</p></small>
 </footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
