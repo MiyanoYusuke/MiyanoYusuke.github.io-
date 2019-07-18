@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!-- ↓ogp↓ -->
+<!-- ↓twitter↓ -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@ユーザー名" />
+<!-- ↑twitter↑ -->
+<meta property="og:title" content="オープンキャンパス | MCL盛岡情報ビジネス専門学校"/>
+<meta property="og:type" content="website" />
+<meta property="og:description" content="モリジョビのOPENCAMPUSのページです。"/>
+<meta property="og:url" content="C:\Users\4183104\Desktop\morijyobiLandingPage"/>
+<meta property="og:site_name" content="オープンキャンパス | MCL盛岡情報ビジネス専門学校"/>
+<meta property="og:image" content="images/txt_opencampus.png"/>
+<!-- ↑ogp↑ -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/hamburger.js"></script>
+<script src="js/fadeIn.js"></script>
+<title>オープンキャンパス | MCL盛岡情報ビジネス専門学校</title>
+<style>
+/*--------animation--------*/
+@keyframes SlideUp {
+    0% {
+        opacity: 0;/* 透明 */
+        transform: translateY(50px);/* Y軸方向に50px */
+    }
+    100% {
+        opacity: 1;/* 不透明 */
+        transform: translateY(0);/* Y軸方向に0px */
+    }
+}
+.SlideUp {
+    animation-name: SlideUp;
+    animation-duration: 1s;
+}
+/*--------fadeIn-----------*/
+/* 画面外にいる状態 */
+.fadein {
+    opacity : 0.1;
+    transform : translate(0, 50px);
+    transition : all 500ms;
+}
+/* 画面内に入った状態 */
+.fadein.scrollin {
+    opacity : 1;
+    transform : translate(0, 0);
+}
+/*-------------------------*/
+/*要素*/
+html {
+    width: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #eee;
+}
+h1 {
+    width: 35%;
+    font-size: 24px;
+    color: #fff;
+    float: left;
+    padding-left: 1%;
+}
+h3 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+a:hover {
+    opacity: 0.8;
+}
+div {
+    width: 100%;
+    margin: 0 auto;
+}
+/*-------------------------------*/
+.flex {
+    display: flex;
+}
+.redColor {
+    color: #a00;
+}
+.margin1 {
+    margin: 1rem;
+}
+.margin-top {
+    margin-top: 100px;
+}
+.text-center {
+    text-align: center;
+}
+.bold {
+    font-weight: bold;
+}
+.big {
+    font-size: 24px;
+    font-weight: bold;
+}
+.mark {
+    background: rgba(255,255,140,0.8);
+}
+.vertical-super {
+    vertical-align: super;
+}
+.break {
+    display: inline-block;
+}
+/*ハンバーガーメニュー*/
+.wrapper {
+    display: none;
+}
+/*--------------header-----------------*/
+header {
+    width: 100%;
+    position: fixed;
+    background-color: rgba(50, 50, 50, 0.8);
+    z-index: 9999;
+}
+header:not(:target){
+    filter: none;
+}
+#nav_container {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+header ul {
+    display: flex;
+    justify-content: flex-end;
+}
+header ul li {
+    list-style: none;
+    margin: 1rem 1.3rem;
+}
+#application {
+    border: 1px solid #aaa;
+    margin: 1rem 1.3rem;
+    padding: .3rem;
+}
+#application:hover{
+    background: #fff;
+    color: #1B1B1B;
+}
+/*--------------main-----------------*/
+#main_0 {
+    margin-bottom: 50px;
+    padding: 100px 0;
+    text-align: center;
+    background-image: url(images/opencampus.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+.main_0_div {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.main_0_item {
+    font-size: 48px;
+    animation-name: SlideUp;
+    animation-duration: 1s;
+}
+.button {
+	display: block;
+	width: 200px;
+	padding: 0.5rem;
+	background: #1B1B1B;
+    color: #fff;
+    border:1px solid #1B1B1B;
+    margin: 0 auto;
+}
+.button:hover {
+    background: #fff;
+    color: #1B1B1B;
+    cursor: pointer;
+	text-decoration: none;
+}
+.main_1_item {
+    width: 300px;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    position: relative;
+}
+.main_1_item .icon {
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+#main_1 dt {
+    font-weight: bold;
+}
+.main_2_item {
+    width: 300px;
+    padding: 0.5rem;
+}
+.main_2_item p {
+    text-align: left;
+}
+#main_3 dl {
+    width: 50%;
+    margin: 0 auto;
+}
+.main_3_item {
+    margin-left: 1rem;
+}
+#main_3 dt {
+    font-weight: bold;
+}
+#main_4 dl {
+    width: 55%;
+    margin: 0 auto;
+}
+#main_4 dt {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+form {
+    width: 240px;
+    margin: 0 auto;
+}
+form dt {
+    margin-top: 20px;
+}
+#namae,#email,#tel {
+    width: 235px;
+    padding: 0.3rem;
+}
+#submit {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#submit:hover {
+    opacity: 0.8;
+}
+/*-----------footer--------------*/
+footer {
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    background-color: rgba(50, 50, 50, 0.8);
+}
+footer p {
+    margin-left: 0.5rem;
+}
+/*バリデーションのメッセージの色*/
+form.cmxform label.error, label.error {
+    color: #a00;
+}
+@media screen and (max-width: 1050px) {
+    .wrapper {
+        height: 100%;
+        overflow-x: hidden;
+        position: relative;
+        display: block;
+    }
+    .overlay {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+    .overlay.open {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+    .menu-trigger {
+        display: inline-block;
+        width: 36px;
+        height: 28px;
+        vertical-align: middle;
+        cursor: pointer;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        z-index: 100;
+        transform: translateX(0);
+        transition: transform .5s;
+    }
+    .menu-trigger.active {
+        transform: translateX(-250px);
+    }
+    .menu-trigger span {
+        display: inline-block;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #333;
+    }
+    .menu-trigger.active span {
+        background-color: #333;
+    }
+    .menu-trigger span:nth-of-type(1) {
+        top: 0;
+    }
+    .menu-trigger.active span:nth-of-type(1) {
+        transform: translateY(12px) rotate(-45deg);
+    }
+    .menu-trigger span:nth-of-type(2) {
+        top: 12px;
+    }
+    .menu-trigger.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    .menu-trigger span:nth-of-type(3) {
+        bottom: 0;
+    }
+    .menu-trigger.active span:nth-of-type(3) {
+        transform: translateY(-12px) rotate(45deg);
+    }
+    .nav-contents {
+        width: 250px;
+        height: 100%;
+        padding-top: 100px;
+        background-color: rgba(50, 50, 50, 0.8);
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        transform: translate(250px);
+        transition: all .5s;
+    }
+    .nav-contents.open {
+        transform: translateZ(0);
+    }
+    .nav-contents ul {
+        display: block;
+    }
+    .nav-contents li {
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #fff;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    /*********************************************/
+    /*****要素******/
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+    /*********header**********/
+    #nav_container {
+        display: none;
+    }
+    /**********main***********/
+    #main_1 .flex,#main_2 .flex {
+        display: block;
+    }
+    .main_3_item {
+        margin: 0;
+    }
+    .clock {
+        display: none;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <!--<div class="header">-->
+    <h1><a href="#">MCL盛岡情報ビジネス専門学校</a></h1>
+    <div id="nav_container">
+        <nav>
+            <ul>
+                <li><a href="#main_1">体験授業</a></li>
+                <li><a href="#main_2">三大特典</a></li>
+                <li><a href="#main_3">一日の流れ</a></li>
+                <li><a href="#main_4">Q&A</a></li>
+                <li><a href="#main_5" id="application">参加申し込み</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--</div>-->
+    <div class="wrapper">
+        <div class="menu-trigger" href="">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-contents">
+            <ul>
+                <li><a href="#main_1">体験授業</a></li>
+                <li><a href="#main_2">三大特典</a></li>
+                <li><a href="#main_3">一日の流れ</a></li>
+                <li><a href="#main_4">Q&A</a></li>
+                <li><a href="#main_5">参加申し込み</a></li>
+            </ul>
+        </nav>
+        <div class="overlay"></div>
+    </div>
+</header>
+<main>
+    <div id="main_0">
+        <div class="main_0_div">
+            <h2 class="main_0_item SlideUp">OPEN<br>CAMPUS</h2>
+            <p class="main_0_item SlideUp">次回開催7月13日</p>
+            <a href="#main_5" class="button SlideUp"><span class="break">お申し込みは</span><span class="break">こちらから！</span></a>
+        </div>
+    </div>
+    <div id="main_1" class="margin-top fadein">
+        <h4 class="text-center bold">興味のある学科を選んで授業を体験しよう！</h4><h3>体験授業</h3>
+        <div class="flex">
+            <div class="main_1_item">
+                <img src="images/txt_taiken_system.png" alt="システム系学科アイコン" class="icon">
+                <img src="images/system.jpg" alt="システム系学科">
+                <dl>
+                    <dt>情報システム科</dt>
+                    <dd>フローチャートでシステム構築</dd>
+                    <dt>ネットワークセキュリティ科</dt>
+                    <dd>ネットワーク構築、HTMLでWEB制作</dd>
+                    <dt>総合システム工学科</dt>
+                    <dd>3Dゲーム開発体験</dd>
+                    <dt>高度情報工学科</dt>
+                    <dd>Androidで動くゲーム作り</dd>
+                    <dt><span class="mark">こんな職業を目指す方</span></dt>
+                    <dd>プログラマー<br>アプリケーションエンジニア<br>ゲームクリエイター<br>システムエンジニア</dd>
+                </dl>
+            </div>
+            <div class="main_1_item">
+                <img src="images/txt_taiken_business.png" alt="ビジネス系学科アイコン" class="icon">
+                <img src="images/business.jpg" alt="ビジネス系学科">
+                <dl>
+                    <dt>情報ビジネス科</dt>
+                    <dd>ビジネス文書作成体験</dd>
+                    <dt>会計ビジネス科</dt>
+                    <dd>簿記演習、FP演習</dd>
+                    <dt><span class="mark">こんな職業を目指す方</span></dt>
+                    <dd>鉄道員<br>事務員<br>銀行員など</dd>
+                </dl>
+            </div>
+            <div class="main_1_item">
+                <img src="images/txt_taiken_design.png" alt="デザイン系学科アイコン" class="icon">
+                <img src="images/design.jpg" alt="デザイン系学科">
+                <dl>
+                    <dt>グラフィックコース</dt>
+                    <dd>IllustratorやPhotoshopを使いこなそう</dd>
+                    <dt>アニメ・マンガコース</dt>
+                    <dd>Gペンを使ってマンガ制作</dd>
+                    <dt>CGクリエイトコース</dt>
+                    <dd>CGアニメーション制作体験</dd>
+                    <dt>建築インテリアコース</dt>
+                    <dd>CADを使って製図体験</dd>
+                    <dt><span class="mark">こんな職業を目指す方</span></dt>
+                    <dd>グラフィックデザイナー<br>イラストレーター<br>WEBデザイナー<br>CGデザイナー<br>店舗デザイナー<br>漫画家など</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div id="main_2" class="margin-top fadein">
+        <h4 class="text-center bold">参加者にもれなくプレゼント</h4><h3>参加者三大特典</h3>
+        <div class="flex text-center">
+            <div class="main_2_item">
+                <!--特典１アイコン-->
+                <img src="images/img_tokuten_1 (1).png" alt="特典１">
+                <p><span class="bold">無料送迎バスを運行</span><br>MCL専門学校グループの専用バスで各校までご案内。岩手県･青森県･秋田県各地から無料送迎バスを運行しております。 無料送迎バスの他に県外・遠方の方もお気軽にご参加いただけるように、交通費の補助をいたしますので事前にお申し込み下さい。<br>※支給額は各学校規定によります。</p>
+            </div>
+            <div class="main_2_item">
+                <!--特典２アイコン-->
+                <img src="images/img_tokuten_2 (1).png" alt="特典2">
+                <p><span class="bold">2回以上行くと選考料半額免除！(高校３年生・社会人 対象)</span><br>オープンキャンパス１回の参加で、選考試験１科目（面・筆）免除。２回以上の参加で選考料半額免除など、オープンキャンパスの参加回数によって入学選考試験受験時の受験科目が免除になる特典や選考料免除などの特典があります。</p>
+            </div>
+            <div class="main_2_item">
+                <!--特典３アイコン-->
+                <img src="images/img_tokuten_3 (1).png" alt="特典3">
+                <p><span class="bold">記念品プレゼント＆ランチ付き！</span><br>参加者、保護者の方へのランチを用意しています。ランチを食べながら在校生や卒業生が学校での活動や生活の様子をお伝えします。アットホームな雰囲気で気になることはなんでも気軽に質問できます。入試・学費や特待生制度についても聞いてみよう！</p>
+            </div>
+        </div>
+    </div>
+    <div id="main_3" class="margin-top fadein">
+        <h4 class="text-center bold">オープンキャンパス</h4><h3>一日の流れ</h3>
+        <dl>
+            <div class="flex margin1">
+                <img src="images/icn_clock_1.png" alt="10:00" class="clock">
+                <div class="main_3_item">
+                    <dt>10:00 受付開始</dt>
+                    <dd>初めての人でも大丈夫！先輩たちが優しく案内します。</dd>
+                </div>
+            </div>
+            <div class="flex margin1">
+                <img src="images/icn_clock_2.png" alt="10:30" class="clock">
+                <div class="main_3_item">
+                    <dt>10:30 全体説明会</dt>
+                    <dd>学校の概要や、私たちが何を大事にしているのか，皆さんに何を大事にして欲しいかをお話します。</dd>
+                </div>
+            </div>
+            <div class="flex margin1">
+                <img src="images/icn_clock_3.png" alt="11:00" class="clock">
+                <div class="main_3_item">
+                    <dt>11:00 体験授業</dt>
+                    <dd>専門学校の実際の授業を模擬体験！希望する各コースに分かれて体験授業を受けます。</dd>
+                </div>
+            </div>
+            <div class="flex margin1">
+                <img src="images/icn_clock_4.png" alt="12:30" class="clock">
+                <div class="main_3_item">
+                    <dt>12:30 ランチタイム</dt>
+                    <dd>ランチを食べながら学生と話せるので、学校での活動や生活など、気になることは何でも気軽に相談できます。</dd>
+                </div>
+            </div>
+            <div class="flex margin1">
+                <img src="images/icn_clock_5.png" alt="13:00" class="clock">
+                <div class="main_3_item">
+                    <dt>13:00 入試制度説明</dt>
+                    <dd>入試のこと、出願方法、特待生制度のこと、学費のこと、入寮奨学制度のことなど、詳しく説明します。</dd>
+                </div>
+            </div>
+            <div class="flex margin1">
+                <img src="images/icn_clock_6.png" alt="13:30" class="clock">
+                <div class="main_3_item">
+                    <dt>13:30（希望者）個別相談・寮見学</dt>
+                    <dd>ご希望の方は、個別相談や寮見学も可能です。希望しない方は13:30で終了となります。</dd>
+                </div>
+            </div>
+        </dl>
+    </div>
+    <div id="main_4" class="margin-top fadein">
+        <h4 class="text-center bold">参加する前の疑問質問にお答えします！</h4><h3>Q&A</h3>
+        <dl>
+            <dt>Q オープンキャンパスに参加するときの持ち物はありますか？</dt>
+            <dd>A.筆記用具を持ってきてください。</dd>
+            <dt>Q 服装は制服ですか？それとも私服ですか？</dt>
+            <dd>A.特に決まりはありませんが、制服で参加する方がほとんどなので制服をオススメします。</dd>
+            <dt>Q 中履きは必要ですか？</dt>
+            <dd>A.必要ありません。外履きのみで大丈夫です。</dd>
+            <dt>Q お母さん・お父さんと一緒に行ってもいいですか？</dt>
+            <dd>A.はい。もちろんです。親御さんとぜひご一緒にお越しください。<br>入学に関する様々な質問に、個別でも対応いたします。</dd>
+            <dt>Q 進路が決まっている友人と行ってもいいですか？</dt>
+            <dd>A.もちろんいいですよ、一緒に参加してください！</dd>
+            <dt>Q 一人で参加しても良いですか？</dt>
+            <dd>A.もちろんです。ぜひ参加してください！</dd>
+            <dt>Q 寮ってありますか？一人暮らしを考えているので寮も検討したいです。</dt>
+            <dd>A.はい。指定寮があるから、初めての一人暮らしも安心です！<br>相談や見学もできますので、見学ご希望の方は事前にご連絡ください。</dd>
+        </dl>
+    </div>
+    <div id="main_5" class="margin-top fadein">
+        <h4 class="text-center bold">参加費無料！何度でもOK！</h4><h3>オープンキャンパス申し込み</h3>
+        <form id="applicationForm" action="">
+            <dl>
+                <dt>氏名<span class="redColor">(必須)</span></dt>
+                <dd><input type="text" name="simei" id="namae"></dd>
+                <dt>e-mail<span class="redColor">(必須)</span></dt>
+                <dd><input type="email" name="email" id="email"></dd>
+                <dt>電話番号</dt>
+                <dd><input type="tel" name="tel" id="tel"></dd>
+                <input id ="submit" class="button" type="submit" value="送信">
+            </dl>
+        </form>
+    </div>
+</main>
+<footer>
+    <p><span class="big">盛岡情報ビジネス専門学校</span><br>〒020-0021 岩手県盛岡市中央通り3-2-17<br><img src="images/phone.png" alt="電話機"><span class="big vertical-super">0120-490114</span></p>
+</footer>
+</body>
+</html>
