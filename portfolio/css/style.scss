@@ -1,0 +1,328 @@
+@charset "utf-8";
+/*変数*/
+$color1 : #222;
+$color2 : rgba(250,250,250,0.8);
+$color3 : rgba(17,153,142,0.5);
+$color4 : rgba(56,239,125,0.5);
+$color5 : rgba(250,250,250,0.6);
+$color6 : rgba(250,250,250,0.3);
+/*-----*/
+* {
+    margin: 0;
+    padding: 0;
+}
+button, input, select, textarea {
+    font-family : inherit;
+}
+html {
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+header {
+    position: fixed;
+    width: 100%;
+    background-color: $color2;
+    z-index: 99;
+    #menu {
+        width: 100%;
+        height: 30px;
+    }
+    ul {
+        display:flex;
+        justify-content: center;
+        list-style: none;
+        li {
+            margin: 1rem;
+            a {
+                color: $color1;
+                display: block;
+                position: relative;
+                text-decoration: none;
+            }
+            a::before,
+            a::after {
+                border-bottom: solid 2px $color1;
+                bottom: 0;
+                content: "";
+                display: block;
+                position: absolute;
+                transition: all .3s ease;
+                -webkit-transition: all .3s ease;
+                width: 0;
+            }
+            a::before {
+            left: 50%;
+            }
+            a::after {
+            right: 50%;
+            }
+            a:hover::before,
+            a:hover::after {
+            width: 50%;
+            }
+            a:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+/*top*/
+#top {
+    /*background*/
+    background-image: url(img/sezon.jpg);
+	background: linear-gradient(-35deg,$color3,$color4),url(C:/Users/4183104/Desktop/portfolio/img/sezon.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*background*/
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    h1 {
+        opacity: 0;
+        font-family: 'Julius Sans One', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: $color5;
+        padding: 1rem;
+        span {
+            position: relative;
+            top: 50px; //topとleft同時指定で斜めの動き
+            //left: 50px;
+            opacity: 0;
+        }
+    }
+}
+/*profile*/
+#profile {
+    /*background*/
+    background-image: url(img/sezon2.jpg);
+	background: linear-gradient(-35deg,$color3,$color4),url(C:/Users/4183104/Desktop/portfolio/img/sezon2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*background*/
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    .profile_img {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 100px;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    div {
+        width: 50%;
+        margin: 0px auto;
+        dl {
+            dt {
+                font-weight: bold;
+            }
+        }
+    }
+    .profile_container {
+        background: $color6;
+        backdrop-filter: blur(3px);
+        padding: 0.5rem;
+        margin-top: 3%;
+    }
+}
+/*work*/
+#work {
+    /*background*/
+    background-image: url(img/sezon3.jpg);
+	background: linear-gradient(-35deg,$color3,$color4),url(C:/Users/4183104/Desktop/portfolio/img/sezon3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*background*/
+    width: 100%;
+    height: auto;
+}
+.cssgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 0.8em;
+    padding: 0.8em;
+    padding-top: 60px;
+    width: 80%;
+    margin: 0 auto;
+    .item {
+        height: 280px;
+        background: $color5;
+        overflow: hidden;
+        min-width: 0;
+        padding: 1em;
+        /*どのサイズの画像でも対応できるように*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+/*モーダルウィンドウ*/
+.modal{
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .js-modal-close {
+        font-size: 400%;
+        text-decoration: none;
+        top: 0;
+        right: 1%;
+        position: absolute;
+    }
+}
+.modal__bg{
+    background: rgba(0,0,0,0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+.modal__content{
+    background: $color2;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 60vh;
+    text-align: center;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/*contact*/
+#contact {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    /*background*/
+    background-image: url(img/sezon4.jpg);
+	background: linear-gradient(-35deg,$color3,$color4),url(C:/Users/4183104/Desktop/portfolio/img/sezon4.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*background*/
+    form {
+        width: 40%;
+        margin: 0 auto;
+        background: $color6;
+        backdrop-filter: blur(3px);
+        padding: 2rem;
+        h2 {
+            width: 40%;
+            margin-bottom: 30px;
+        }
+        dl {
+            dt {
+                font-weight: bold;
+            }
+            dd {
+                margin-bottom: 2rem;
+                input {
+                    width: 100%;
+                    padding: 0.3rem;
+                }
+                textarea {
+                    width: 100%;
+                    padding: 0.3rem
+                }
+            }
+            input[type="submit"] {
+                font-size: 100%;
+                padding: 0.3rem 1rem;
+                border: solid 1px $color1;
+                transition-duration: 0.4s;
+            }
+            input[type="submit"]:hover {
+                background: $color1;
+                color: #eee;
+            }
+        }
+    }
+}
+#top footer {
+    position: fixed;
+    bottom: 0;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(-35deg,$color3,$color4);
+}
+#gnav {
+    display: none;
+}
+.slicknav_menu {
+    display:none;/*PC時は非表示*/
+}
+@media screen and (max-width:768px){
+    #gnav {
+        display:none;/*モバイル時は非表示*/
+    }
+    .slicknav_menu {
+        display:block;/*モバイル時は表示*/
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+        a {
+            color: $color1;
+            text-align: center;
+        }
+        a:hover {
+            opacity: 0.5;
+        }
+    }
+    nav {
+        display: none;
+    }
+    /*profile*/
+    #profile {
+        div {
+            width: 80%;
+        }
+    }
+    /*contact*/
+    #contact {
+        h2 {
+            width: 70%;
+        }
+        form {
+            width: 70%;
+        }
+    }
+}
+@media screen and (max-width:565px){
+    h1 {
+        text-align: center;
+    }
+}
+@media screen and (max-width:400px){
+    .cssgrid {
+        width: unset;
+        margin: unset;
+    }
+}
