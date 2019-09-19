@@ -76,7 +76,7 @@ header ul li a:hover {
 #top {
   /*background*/
   background-image: url(img/sezon.jpg);
-  background: linear-gradient(-35deg, rgba(17, 153, 142, 0.5), rgba(56, 239, 125, 0.5)), url(C:/Users/4183104/Desktop/portfolio/img/sezon.jpg);
+  background: linear-gradient(-35deg, rgba(17, 153, 142, 0.5), rgba(56, 239, 125, 0.5)), url(img/sezon.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
