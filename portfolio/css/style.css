@@ -284,13 +284,13 @@ header ul li a:hover {
 #contact form dl input[type="submit"] {
   font-size: 100%;
   padding: 0.3rem 1rem;
-  border: solid 1px #222;
+  border: solid 1px rgb(56, 239, 125);
   transition-duration: 0.4s;
 }
 
 #contact form dl input[type="submit"]:hover {
-  background: #222;
-  color: #eee;
+  background: rgba(56, 239, 125, 0.5);
+  color: #fff;
 }
 
 #top footer {
