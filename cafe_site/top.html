@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+<title>TOP</title>
+</head>
+<body id="top">
+<header>
+    <nav>
+        <ul>
+            <li><a href="top.html">TOP</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="info.html">INFO</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="slide"><h1>miyano cafe</h1><p class="scroll">scroll</p><p class="sita"></p></div>
+    <div class="top_flex">
+        <div>
+            <h2>MENU</h2>
+            <div class="img_container">
+                <img src="img/food.jpg" alt="パスタ">
+            </div>
+            <p>当店自慢のメニューをご覧あれ！</p>
+            <a href="menu.html" class="btn">MENUは<span class="break">こちら</span></a>
+        </div>
+        <div>
+            <h2>INFO</h2>
+            <div class="img_container">
+                <img src="img/top_new.jpg" alt="新メニュー">
+            </div>
+            <p>新メニューのお知らせなど随時更新！</p>
+            <a href="info.html" class="btn">INFOは<span class="break">こちら</span></a>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer_box">
+        <div>
+            <p> 
+            <span class="bold">miyano cafe</span><br>
+                〒020-0021<br>
+                岩手県盛岡市中央通3-2-17<br>
+                TEL : 0120-490114
+            </p>
+        </div>
+        <div>
+            <p>
+                火曜･木曜 : 11:30-18:00 &lt;L.O. 17:30&gt;<br>
+                金曜･土曜 : 11:30-22:00 &lt;L.O. 21:30&gt;<br>
+                日曜 : 11:30-20:00 &lt;L.O. 19:30&gt;<br>
+                CLOSE：月曜･水曜
+            </p>
+        </div>
+        <p><small>&copy;MiyanoYusuke 2019</small></p>
+    </div>
+</footer>
+<img src="img/top1.jpg" style="display:none;">
+<img src="img/top2.jpg" style="display:none;">
+<img src="img/top3.jpg" style="display:none;">
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.bgswitcher.js"></script>
+<script>
+$(".slide").bgswitcher({
+  images: ["img/top1.jpg", "img/top2.jpg", "img/top3.jpg"],
+  interval: 3000,
+  duration: 1500
+});
+</script>
+</body>
+</html>
