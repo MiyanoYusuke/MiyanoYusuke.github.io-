@@ -75,8 +75,8 @@ header ul li a:hover {
 /*top*/
 #top {
   /*background*/
-  background-image: url(img/sezon.jpg);
-  background: linear-gradient(-35deg, rgba(17, 153, 142, 0.5), rgba(56, 239, 125, 0.5)), url(https://miyanoyusuke.github.io/MiyanoYusuke.github.io-/portfolio/img/sezon.jpg);
+  background-image: url(../img/sezon.jpg);
+  background: linear-gradient(-35deg, rgba(17, 153, 142, 0.5), rgba(56, 239, 125, 0.5)), url(../img/sezon.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -106,8 +106,8 @@ header ul li a:hover {
 /*profile*/
 #profile {
   /*background*/
-  background-image: url(img/sezon2.jpg);
-  background: linear-gradient(-35deg, rgba(17, 153, 142, 0.5), rgba(56, 239, 125, 0.5)), url(https://miyanoyusuke.github.io/MiyanoYusuke.github.io-/portfolio/img/sezon2.jpg);
+  background-image: url(../img/sezon2.jpg);
+  background: linear-gradient(-35deg, rgba(17, 153, 142, 0.5), rgba(56, 239, 125, 0.5)), url(../img/sezon2.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -151,8 +151,8 @@ header ul li a:hover {
 /*work*/
 #work {
   /*background*/
-  background-image: url(img/sezon3.jpg);
-  background: linear-gradient(-35deg, rgba(17, 153, 142, 0.5), rgba(56, 239, 125, 0.5)), url(https://miyanoyusuke.github.io/MiyanoYusuke.github.io-/portfolio/img/sezon3.jpg);
+  background-image: url(../img/sezon3.jpg);
+  background: linear-gradient(-35deg, rgba(17, 153, 142, 0.5), rgba(56, 239, 125, 0.5)), url(../img/sezon3.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -200,6 +200,7 @@ header ul li a:hover {
   height: 100vh;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -221,77 +222,21 @@ header ul li a:hover {
 .modal__content {
   background: rgba(250, 250, 250, 0.8);
   left: 50%;
-  padding: 40px;
+  padding: 60px;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
   height: 60vh;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__content img {
   max-width: 100%;
   max-height: 100%;
-}
-
-/*contact*/
-#contact {
-  width: 100%;
-  padding-top: 80px;
-  padding-bottom: 60px;
-  /*background*/
-  background-image: url(img/sezon4.jpg);
-  background: linear-gradient(-35deg, rgba(17, 153, 142, 0.5), rgba(56, 239, 125, 0.5)), url(https://miyanoyusuke.github.io/MiyanoYusuke.github.io-/portfolio/img/sezon4.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /*background*/
-}
-
-#contact form {
-  width: 40%;
-  margin: 0 auto;
-  background: rgba(250, 250, 250, 0.3);
-  backdrop-filter: blur(3px);
-  padding: 2rem;
-}
-
-#contact form h2 {
-  width: 40%;
-  margin-bottom: 30px;
-}
-
-#contact form dl dt {
-  font-weight: bold;
-}
-
-#contact form dl dd {
-  margin-bottom: 2rem;
-}
-
-#contact form dl dd input {
-  width: 100%;
-  padding: 0.3rem;
-}
-
-#contact form dl dd textarea {
-  width: 100%;
-  padding: 0.3rem;
-}
-
-#contact form dl input[type="submit"] {
-  font-size: 100%;
-  padding: 0.3rem 1rem;
-  border: solid 1px rgb(56, 239, 125);
-  transition-duration: 0.4s;
-  background: #fff;
-}
-
-#contact form dl input[type="submit"]:hover {
-  background: rgba(56, 239, 125, 0.5);
-  color: #fff;
 }
 
 #top footer {
@@ -339,13 +284,6 @@ footer {
   /*profile*/
   #profile div {
     width: 80%;
-  }
-  /*contact*/
-  #contact h2 {
-    width: 70%;
-  }
-  #contact form {
-    width: 70%;
   }
 }
 
